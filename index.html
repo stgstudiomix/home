@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link 
+        rel="icon" 
+        type="image/png" 
+        href="https://i.postimg.cc/fyF5fYJ4/Chat-GPT-Image-5-de-mai-de-2026-20-35-42.png"
+    />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STG Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'IBM Plex Sans', sans-serif;
+      background:#050505;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:600px;
+      height:600px;
+      background:radial-gradient(circle, rgba(120,0,255,.18) 0%, rgba(0,0,0,0) 70%);
+      top:-200px;
+      right:-200px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:radial-gradient(circle, rgba(0,170,255,.12) 0%, rgba(0,0,0,0) 70%);
+      bottom:-200px;
+      left:-200px;
+      z-index:-1;
+    }
+
+    .container{
+      width:100%;
+      max-width:1200px;
+      margin:auto;
+      padding:40px 20px 80px;
+    }
+
+    .logo{
+      display:flex;
+      justify-content:center;
+      margin-bottom:50px;
+    }
+
+    .logo img{
+      width:180px;
+      object-fit:contain;
+    }
+
+    .top-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-bottom:50px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:32px;
+      backdrop-filter:blur(12px);
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(140,90,255,.5);
+    }
+
+    h1{
+      font-size:32px;
+      font-weight:600;
+      margin-bottom:18px;
+      letter-spacing:-1px;
+    }
+
+    h2{
+      font-size:24px;
+      margin-bottom:16px;
+      font-weight:500;
+    }
+
+    p{
+      color:#b9b9b9;
+      line-height:1.7;
+      margin-bottom:24px;
+      font-size:15px;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      background:#0f0f0f;
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:14px;
+      padding:16px;
+      color:#fff;
+      font-family:'IBM Plex Sans', sans-serif;
+      outline:none;
+      transition:.3s;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color:#7e57c2;
+    }
+
+    textarea{
+      min-height:120px;
+      resize:none;
+    }
+
+    button,
+    .button{
+      background:linear-gradient(135deg,#7e57c2,#4b2cff);
+      color:#fff;
+      border:none;
+      padding:16px 22px;
+      border-radius:14px;
+      font-size:15px;
+      font-weight:500;
+      cursor:pointer;
+      transition:.3s;
+      text-decoration:none;
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:100%;
+    }
+
+    button:hover,
+    .button:hover{
+      opacity:.9;
+      transform:translateY(-2px);
+    }
+
+    .download-section{
+      margin-top:20px;
+    }
+
+    .download-card{
+      text-align:center;
+      padding:60px 30px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:28px;
+    }
+
+    .download-card h2{
+      font-size:36px;
+      margin-bottom:16px;
+    }
+
+    .download-card p{
+      max-width:650px;
+      margin:0 auto 30px;
+    }
+
+    .download-button{
+      max-width:320px;
+      margin:auto;
+    }
+
+    .mini-text{
+      font-size:13px;
+      color:#777;
+      margin-top:14px;
+      text-align:center;
+    }
+
+    @media(max-width:900px){
+
+      .top-grid{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:26px;
+      }
+
+      .download-card h2{
+        font-size:28px;
+      }
+
+      .card{
+        padding:24px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="https://i.postimg.cc/ZncDJrvB/logo.webp" alt="Logo">
+    </div>
+
+    <!-- TOP -->
+    <div class="top-grid">
+
+      <!-- SERVICES -->
+      <div class="card">
+
+        <h1>Ghost Production & Mix / Master</h1>
+
+        <p>
+          Professional ghost production, co-production, mix and master focused on electronic music.
+          Send your idea, reference track or project details and let's create something unique.
+        </p>
+
+        <!-- FORM -->
+        <form action="https://formsubmit.co/stgstudiomix@gmail.com" method="POST">
+
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Your email"
+            required
+          >
+
+          <textarea 
+            name="message" 
+            placeholder="Tell me what you need..."
+            required
+          ></textarea>
+
+          <!-- CONFIG -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Client Request">
+
+          <button type="submit">
+            Send Request
+          </button>
+          <input type="hidden" name="_next" value="https://stgstudiomix.github.io/Maccabi-House-Style/">
+        </form>
+
+      </div>
+
+      <!-- DONATE -->
+      <div class="card">
+
+        <h1>Support Me</h1>
+
+        <p>
+          If you enjoy the remakes, edits and content from the channel, you can support the project with a donation.
+          Every support helps me continue creating new music and exclusive content.
+        </p>
+
+        <a 
+          href="https://www.paypal.com/donate/?hosted_button_id=DMW8NU58ZPWAY"
+          target="_blank"
+          class="button"
+        >
+          Donate Now
+        </a>
+
+        <div class="mini-text">
+          You can send any amount.
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Modern Stats Section -->
+<section class="music-stats">
+
+  <div class="stats-header">
+    <span>HIRE WHO TRULY LIVES THIS</span>
+    <h2>Real Numbers.<br>Modern Sound.</h2>
+  </div>
+
+  <div class="stats-grid">
+
+    <div class="stat-card spotify">
+      <div class="glow"></div>
+
+      <div class="top">
+        <span class="label">Spotify</span>
+        <span class="icon">●</span>
+      </div>
+
+      <h3>1M+</h3>
+      <p>Streams Worldwide</p>
+      <a 
+          href="https://open.spotify.com/intl-pt/artist/541OT8YFM6J9zezRlevkqK?si=IinWZBJxTeGC3Ux_1v8TvA"
+          target="_blank"
+          class="button"
+        >
+          SEE HERE
+        </a>
+    </div>
+
+    <div class="stat-card soundcloud">
+      <div class="glow"></div>
+
+      <div class="top">
+        <span class="label">SoundCloud</span>
+        <span class="icon">●</span>
+      </div>
+
+      <h3>200K+</h3>
+      <p>Organic Plays</p>
+      <a 
+          href="https://soundcloud.com/stigymusic"
+          target="_blank"
+          class="button"
+        >
+          SEE HERE
+        </a>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  body{
+    background:#050510;
+    font-family:Inter,sans-serif;
+  }
+
+  .music-stats{
+    width:100%;
+    min-height:100vh;
+    padding:100px 20px;
+    background:
+      radial-gradient(circle at top,
+      rgba(180,80,255,0.15),
+      transparent 40%),
+      #050510;
+
+    overflow:hidden;
+  }
+
+  .stats-header{
+    max-width:1200px;
+    margin:0 auto 60px auto;
+  }
+
+  .stats-header span{
+    color:#b66cff;
+    font-size:0.9rem;
+    letter-spacing:3px;
+    font-weight:600;
+  }
+
+  .stats-header h2{
+    color:white;
+    font-size:4rem;
+    line-height:1;
+    margin-top:18px;
+    font-weight:800;
+    letter-spacing:-3px;
+
+    opacity:0;
+    transform:translateY(30px);
+
+    animation:fadeUp 1s ease forwards;
+  }
+
+  .stats-grid{
+    max-width:1200px;
+    margin:0 auto;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+  }
+
+  .stat-card{
+    position:relative;
+
+    padding:40px;
+    border-radius:30px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.03)
+      );
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+
+    overflow:hidden;
+
+    opacity:0;
+    transform:translateY(40px);
+
+    animation:cardAppear 1s ease forwards;
+
+    transition:0.45s ease;
+  }
+
+  .soundcloud{
+    animation-delay:0.2s;
+  }
+
+  .stat-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(182,108,255,0.4);
+
+    box-shadow:
+      0 20px 60px rgba(182,108,255,0.12);
+  }
+
+  .glow{
+    position:absolute;
+    width:250px;
+    height:250px;
+
+    background:#b66cff;
+    filter:blur(120px);
+
+    opacity:0.18;
+
+    top:-100px;
+    right:-100px;
+  }
+
+  .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:50px;
+
+    position:relative;
+    z-index:2;
+  }
+
+  .label{
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    opacity:0.9;
+  }
+
+  .icon{
+    color:#d48fff;
+    font-size:1rem;
+  }
+
+  .stat-card h3{
+    font-size:5rem;
+    color:white;
+    line-height:1;
+
+    margin-bottom:14px;
+
+    font-weight:800;
+    letter-spacing:-4px;
+
+    position:relative;
+    z-index:2;
+  }
+
+  .stat-card p{
+    color:rgba(255,255,255,0.6);
+    font-size:1rem;
+
+    margin-bottom:40px;
+
+    position:relative;
+    z-index:2;
+  }
+
+  .bar{
+    width:100%;
+    height:14px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.06);
+
+    overflow:hidden;
+
+    position:relative;
+    z-index:2;
+  }
+
+  .fill{
+    height:100%;
+    border-radius:20px;
+
+    position:relative;
+
+    animation:growBar 2s ease forwards;
+  }
+
+  .spotify-fill{
+    width:92%;
+
+    background:
+      linear-gradient(
+        90deg,
+        #c86fff,
+        #ff8df5
+      );
+  }
+
+  .soundcloud-fill{
+    width:68%;
+
+    background:
+      linear-gradient(
+        90deg,
+        #b66cff,
+        #ff8df5
+      );
+  }
+
+  @keyframes fadeUp{
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+
+  @keyframes cardAppear{
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+
+  @keyframes growBar{
+    from{
+      width:0;
+    }
+  }
+
+  /* Mobile */
+  @media(max-width:768px){
+
+    .stats-header h2{
+      font-size:2.8rem;
+    }
+
+    .stats-grid{
+      grid-template-columns:1fr;
+    }
+
+    .stat-card{
+      padding:32px;
+    }
+
+    .stat-card h3{
+      font-size:3.5rem;
+    }
+
+  }
+</style>
+
+  </div>
+
+</body>
+</html>
